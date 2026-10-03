@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #ff758c,
+        #ff7eb3
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Isi utama */
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+/* Hati utama */
+.heart {
+    font-size: 100px;
+    animation: detak 1s infinite;
+}
+
+/* Tulisan I Love You */
+h1 {
+    color: white;
+    font-size: 45px;
+    margin: 15px 0;
+
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tulisan kecil */
+h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/* Nama */
+.nama {
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Animasi hati utama */
+@keyframes detak {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Hati yang terbang */
+.love {
+    position: absolute;
+    color: white;
+    font-size: 25px;
+
+    bottom: -50px;
+
+    animation: naik 6s linear infinite;
+}
+
+/* Posisi dan waktu animasi */
+.love:nth-child(1) {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.love:nth-child(2) {
+    left: 30%;
+    animation-delay: 3s;
+}
+
+.love:nth-child(3) {
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.love:nth-child(4) {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.love:nth-child(5) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+/* Animasi hati naik */
+@keyframes naik {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+
+    .heart {
+        font-size: 80px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}
